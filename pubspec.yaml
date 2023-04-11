@@ -1,0 +1,43 @@
+name: flutter_provider_bloc
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <4.0.0'
+
+dependencies:
+  auto_route:
+  bloc:
+  bloc_concurrency:
+  cupertino_icons:
+  dio:
+  equatable:
+  flutter:
+    sdk: flutter
+  flutter_bloc:
+  form_field_validator:
+  freezed_annotation:
+  freezed_result:
+  get_it:
+  injectable:
+  json_annotation:
+  lint:
+  provider:
+  retrofit:
+
+dev_dependencies:
+  auto_route_generator:
+  build_runner:
+  flutter_gen_runner:
+  flutter_lints:
+  flutter_test:
+    sdk: flutter
+  freezed:
+  injectable_generator:
+  json_serializable:
+  retrofit_generator:
+
+
+flutter:
+  uses-material-design: true
