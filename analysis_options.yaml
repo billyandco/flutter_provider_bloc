@@ -12,3 +12,5 @@ linter:
   rules:
     prefer_single_quotes: true
     sort_constructors_first: true
+    # for dev only
+    avoid_print: false

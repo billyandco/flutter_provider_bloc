@@ -9,14 +9,14 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter_provider_bloc/features/home/domain/usecase/fetch_random_number_usecase.dart'
+import 'package:flutter_state_management/features/home/domain/usecase/fetch_random_number_usecase.dart'
     as _i3;
-import 'package:flutter_provider_bloc/features/home/home.dart' as _i5;
-import 'package:flutter_provider_bloc/features/home/presentation/controller/bloc/number_controller_bloc.dart'
+import 'package:flutter_state_management/features/home/home.dart' as _i5;
+import 'package:flutter_state_management/features/home/presentation/controller/bloc/number_controller_bloc.dart'
     as _i4;
-import 'package:flutter_provider_bloc/features/home/presentation/controller/cubit/number_controller_cubit.dart'
+import 'package:flutter_state_management/features/home/presentation/controller/cubit/number_controller_cubit.dart'
     as _i6;
-import 'package:flutter_provider_bloc/features/home/presentation/controller/provider/number_controller_provider.dart'
+import 'package:flutter_state_management/features/home/presentation/controller/provider/number_controller_provider.dart'
     as _i7;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;

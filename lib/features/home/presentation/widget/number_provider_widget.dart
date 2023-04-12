@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider_bloc/core/injection.dart';
-import 'package:flutter_provider_bloc/features/home/home.dart';
-import 'package:flutter_provider_bloc/features/home/presentation/controller/provider/provider.dart';
+import 'package:flutter_state_management/core/injection.dart';
+import 'package:flutter_state_management/features/home/home.dart';
+import 'package:flutter_state_management/features/home/presentation/controller/provider/provider.dart';
 import 'package:provider/provider.dart';
 
 class NumberProviderWidget extends StatelessWidget {
@@ -9,6 +9,7 @@ class NumberProviderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Provider');
     return ChangeNotifierProvider(
       create: (_) => getIt<NumberControllerProvider>(),
       builder: (context, child) {
@@ -17,6 +18,7 @@ class NumberProviderWidget extends StatelessWidget {
           onAdd: context.read<NumberControllerProvider>().add,
           number: Consumer<NumberControllerProvider>(
             builder: (context, controller, _) {
+              print('value: ${controller.number}');
               return NumberText(number: controller.number);
             },
           ),

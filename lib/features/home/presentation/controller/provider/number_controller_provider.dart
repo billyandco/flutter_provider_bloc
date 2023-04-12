@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_provider_bloc/features/home/domain/usecase/fetch_random_number_usecase.dart';
+import 'package:flutter_state_management/features/home/domain/usecase/fetch_random_number_usecase.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable

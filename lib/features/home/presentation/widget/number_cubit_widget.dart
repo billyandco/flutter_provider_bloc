@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_provider_bloc/core/injection.dart';
-import 'package:flutter_provider_bloc/features/home/presentation/controller/cubit/cubit.dart';
-import 'package:flutter_provider_bloc/features/home/presentation/widget/number_widget.dart';
+import 'package:flutter_state_management/core/injection.dart';
+import 'package:flutter_state_management/features/home/presentation/controller/cubit/cubit.dart';
+import 'package:flutter_state_management/features/home/presentation/widget/number_widget.dart';
 
 class NumberCubitWidget extends StatelessWidget {
   const NumberCubitWidget({super.key});
@@ -13,6 +13,7 @@ class NumberCubitWidget extends StatelessWidget {
       create: (_) => getIt<NumberControllerCubit>(),
       child: Builder(
         builder: (context) {
+          print('Cubit');
           return NumberWidget(
             onRandom: context.read<NumberControllerCubit>().random,
             onAdd: context.read<NumberControllerCubit>().add,
@@ -32,10 +33,10 @@ class NumberCubitWidget extends StatelessWidget {
                       style: TextStyle(fontSize: 32),
                     ),
                   ),
-                  loading: () => const Center(
-                    child: CircularProgressIndicator(),
-                  ),
-                  success: (value) => NumberText(number: value),
+                  success: (value) {
+                    print('value: $value');
+                    return NumberText(number: value);
+                  },
                 );
               },
             ),

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.billyandco.flutter_provider_bloc.flutter_provider_bloc">
+    package="com.billyandco.flutter_state_management">
    <application
-        android:label="flutter_provider_bloc"
+        android:label="flutter_state_management"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

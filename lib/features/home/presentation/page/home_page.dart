@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider_bloc/features/home/presentation/widget/widget.dart';
+import 'package:flutter_state_management/features/home/presentation/widget/number_stateful_widget.dart';
+import 'package:flutter_state_management/features/home/presentation/widget/widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,11 +11,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late final TabController controller;
+  late final Map<Tab, Widget> tabs;
 
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 4, vsync: this);
+
+    tabs = {
+      const Tab(child: Text('Stateful')): const NumberStatefulWidget(),
+      const Tab(child: Text('Provider')): const NumberProviderWidget(),
+      const Tab(child: Text('Bloc')): const NumberBlocWidget(),
+      const Tab(child: Text('Cubit')): const NumberCubitWidget(),
+      const Tab(child: Text('Riverpod')): const NumberRiverpodWidget(),
+    };
+
+    controller = TabController(length: tabs.length, vsync: this);
   }
 
   @override
@@ -25,22 +36,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         centerTitle: true,
         bottom: TabBar(
           controller: controller,
-          tabs: const [
-            Tab(child: Text('Stateful')),
-            Tab(child: Text('Provider')),
-            Tab(child: Text('Bloc')),
-            Tab(child: Text('Cubit')),
-          ],
+          tabs: tabs.keys.toList(),
         ),
       ),
       body: TabBarView(
         controller: controller,
-        children: const [
-          NumberProviderWidget(),
-          NumberProviderWidget(),
-          NumberBlocWidget(),
-          NumberCubitWidget(),
-        ],
+        children: tabs.values.toList(),
       ),
     );
   }

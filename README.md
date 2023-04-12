@@ -1,4 +1,4 @@
-# flutter_provider_bloc
+# flutter_state_management
 
 This project has been made to explain by live coding the different manner to handle data through state management
 

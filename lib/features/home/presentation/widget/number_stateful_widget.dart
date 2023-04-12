@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider_bloc/core/injection.dart';
-import 'package:flutter_provider_bloc/features/home/domain/domain.dart';
-import 'package:flutter_provider_bloc/features/home/presentation/widget/number_widget.dart';
+import 'package:flutter_state_management/core/injection.dart';
+import 'package:flutter_state_management/features/home/domain/domain.dart';
+import 'package:flutter_state_management/features/home/presentation/widget/number_widget.dart';
 
 class NumberStatefulWidget extends StatefulWidget {
   const NumberStatefulWidget({super.key});
@@ -40,6 +40,9 @@ class _NumberStatefulWidgetState extends State<NumberStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print('Stateful');
+    print('value: $number');
+
     return NumberWidget(
       onRandom: random,
       onAdd: add,

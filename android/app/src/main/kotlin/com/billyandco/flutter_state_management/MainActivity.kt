@@ -1,4 +1,4 @@
-package com.billyandco.flutter_provider_bloc.flutter_provider_bloc
+package com.billyandco.flutter_state_management
 
 import io.flutter.embedding.android.FlutterActivity
 

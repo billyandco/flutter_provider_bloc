@@ -1,5 +1,5 @@
-name: flutter_provider_bloc
-description: A new Flutter project.
+name: flutter_state_management
+description: A repository for Flutter state management example
 publish_to: 'none'
 version: 0.1.0
 
@@ -16,6 +16,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc:
+  flutter_riverpod:
   form_field_validator:
   freezed_annotation:
   freezed_result:
@@ -25,10 +26,12 @@ dependencies:
   lint:
   provider:
   retrofit:
+  riverpod_annotation:
 
 dev_dependencies:
   auto_route_generator:
   build_runner:
+  custom_lint:
   flutter_gen_runner:
   flutter_lints:
   flutter_test:
@@ -37,6 +40,8 @@ dev_dependencies:
   injectable_generator:
   json_serializable:
   retrofit_generator:
+  riverpod_generator:
+  riverpod_lint:
 
 
 flutter:
