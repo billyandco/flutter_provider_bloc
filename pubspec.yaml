@@ -16,6 +16,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc:
+  flutter_mobx:
   flutter_riverpod:
   form_field_validator:
   freezed_annotation:
@@ -24,6 +25,7 @@ dependencies:
   injectable:
   json_annotation:
   lint:
+  mobx:
   provider:
   retrofit:
   riverpod_annotation:
@@ -39,6 +41,7 @@ dev_dependencies:
   freezed:
   injectable_generator:
   json_serializable:
+  mobx_codegen:
   retrofit_generator:
   riverpod_generator:
   riverpod_lint:

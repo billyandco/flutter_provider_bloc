@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/features/home/presentation/widget/number_stateful_widget.dart';
 import 'package:flutter_state_management/features/home/presentation/widget/widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,6 +22,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       const Tab(child: Text('Bloc')): const NumberBlocWidget(),
       const Tab(child: Text('Cubit')): const NumberCubitWidget(),
       const Tab(child: Text('Riverpod')): const NumberRiverpodWidget(),
+      const Tab(child: Text('MobX')): const NumberMobXWidget(),
     };
 
     controller = TabController(length: tabs.length, vsync: this);

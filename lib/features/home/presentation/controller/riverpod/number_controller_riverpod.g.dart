@@ -7,7 +7,7 @@ part of 'number_controller_riverpod.dart';
 // **************************************************************************
 
 String _$iFetchRandomNumberUsecaseHash() =>
-    r'c81db18e8d23a0bb24ed16e77a4c0d1bae8829dd';
+    r'a321e353601c57cc977795d45b3a02044c6a0a3a';
 
 /// See also [iFetchRandomNumberUsecase].
 @ProviderFor(iFetchRandomNumberUsecase)

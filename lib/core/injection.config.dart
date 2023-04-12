@@ -9,6 +9,7 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:flutter_state_management/features/features.dart' as _i8;
 import 'package:flutter_state_management/features/home/domain/usecase/fetch_random_number_usecase.dart'
     as _i3;
 import 'package:flutter_state_management/features/home/home.dart' as _i5;
@@ -16,8 +17,10 @@ import 'package:flutter_state_management/features/home/presentation/controller/b
     as _i4;
 import 'package:flutter_state_management/features/home/presentation/controller/cubit/number_controller_cubit.dart'
     as _i6;
-import 'package:flutter_state_management/features/home/presentation/controller/provider/number_controller_provider.dart'
+import 'package:flutter_state_management/features/home/presentation/controller/mobx/number_controller_mobx.dart'
     as _i7;
+import 'package:flutter_state_management/features/home/presentation/controller/provider/number_controller_provider.dart'
+    as _i9;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -38,8 +41,10 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i4.NumberControllerBloc(gh<_i5.IFetchRandomNumberUsecase>()));
     gh.factory<_i6.NumberControllerCubit>(
         () => _i6.NumberControllerCubit(gh<_i5.IFetchRandomNumberUsecase>()));
-    gh.factory<_i7.NumberControllerProvider>(() =>
-        _i7.NumberControllerProvider(gh<_i3.IFetchRandomNumberUsecase>()));
+    gh.factory<_i7.NumberControllerMobx>(
+        () => _i7.NumberControllerMobx(gh<_i8.IFetchRandomNumberUsecase>()));
+    gh.factory<_i9.NumberControllerProvider>(() =>
+        _i9.NumberControllerProvider(gh<_i3.IFetchRandomNumberUsecase>()));
     return this;
   }
 }
